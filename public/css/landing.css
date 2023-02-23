@@ -33,16 +33,6 @@ body {
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-/* rtl:begin:ignore */
-.marketing .col-lg-4 p {
-    margin-right: 0.75rem;
-    margin-left: 0.75rem;
-}
 /* rtl:end:ignore */
 
 /* Featurettes
@@ -126,6 +116,10 @@ body {
     width: 275px;
     height: auto;
     border-radius: 20px;
+    box-shadow: 1px 1px 4px 1px rgb(0 0 0 / 25%);
+}
+.card-product {
+    border-radius: 5px;
     box-shadow: 1px 1px 4px 1px rgb(0 0 0 / 25%);
 }
 

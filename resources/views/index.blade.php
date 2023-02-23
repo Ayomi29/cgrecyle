@@ -46,83 +46,84 @@
       </nav>
     </header>
 
-    <main>
-      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel"
-      data-aos="fade-in-right"
-      data-aos-easing="ease-in-out" data-aos-duration="1000">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container">
-                <div class="carousel-caption d-flex align-items-center text-start justify-content-around">
-                    <img src="images/logo_cgrecyle.jpg" class="img-carousel-logo" alt="">
-                    
-                    <div class="d-flex flex-column">
-                        <h1>Welcome to CG Recyle</h1>
-                        <p>
-                            Special Recycled & Upcycled Glassware <br>
-                            Based In Bali <br>
-                        </p>
-                        <p>
-                          <a class="btn btn-lg btn-primary" href="https://api.whatsapp.com/send/?phone=6289697173037&text&type=phone_number&app_absent=0">Ask us Anything, We're Here to Assist You</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <main style="margin-top: 100px">
+      <div class="container">
+        <div id="myCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel" data-aos="fade-in-right" data-aos-easing="ease-in-out" data-aos-duration="1000">
+          <div class="carousel-indicators">
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
           </div>
-          <div class="carousel-item">
-            <div class="container">
-                <div class="carousel-caption d-flex align-items-center text-start justify-content-around">
-                    <img src="images/img1.jpg" class="img-carousel" alt="">
-                    
-                    <div class="d-flex flex-column col-md-6 ">
-                        <h1>Our Product</h1>
-                        <p>
-                            Our Shop Provide a Recycled & Upcycled Glassware <br>
-                        </p>
-                        <p>
-                          <a class="btn btn-lg btn-primary" href="#products">Click Here!</a>
-                        </p>
-                    </div>
-                </div>
+          <div class="carousel-inner bg-grn">
+            <div class="carousel-item active">
+              <div class="container">
+                  <div class="carousel-caption d-flex align-items-center text-start justify-content-around">
+                      <img src="images/logo_cgrecyle.jpg" class="img-carousel-logo" alt="">
+                      
+                      <div class="d-flex flex-column">
+                          <h1>Welcome to CG Recyle</h1>
+                          <p>
+                              Special Recycled & Upcycled Glassware <br>
+                              Based In Bali <br>
+                          </p>
+                          <p>
+                            <a class="btn btn-lg btn-primary" href="https://api.whatsapp.com/send/?phone=6289697173037&text&type=phone_number&app_absent=0">Ask us Anything, We're Here to Assist You</a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
             </div>
+            <div class="carousel-item">
+              <div class="container">
+                  <div class="carousel-caption d-flex align-items-center text-start justify-content-around">
+                      <img src="images/img1.jpg" class="img-carousel" alt="">
+                      
+                      <div class="d-flex flex-column col-md-6 ">
+                          <h1>Our Product</h1>
+                          <p>
+                              Our Shop Provide a Recycled & Upcycled Glassware <br>
+                          </p>
+                          <p>
+                            <a class="btn btn-lg btn-primary" href="#products">Click Here!</a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            
           </div>
-          
+          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
 
-      <div class="container marketing" id="products" data-aos="fade-in-right" data-aos-easing="ease-in-out" data-aos-duration="1000">
-        <!-- Three columns of text below the carousel -->
+      <div class="container products" id="products" data-aos="fade-in-right" data-aos-easing="ease-in-out" data-aos-duration="1000">
         <div class="row">
           @foreach ($products as $product)
-            
-          <div class="col-lg-4">
-            <img src="{{ asset('storage/' . $product->image) }}" class="img-rounded" alt="img-product">
-            <h2 class="fw-bold">{{ $product->name }}</h2>
-            <p class="fw-normal">{{ $product->price }}</p>
-            <p class="fw-normal">
-              {{ $product->desc_product }}
-            </p>
-            <p>
-              <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=6289697173037&text&type=phone_number&app_absent=0">Buy Here &raquo;</a>
-            </p>
+          <div class="col-md-4 card-product mb-4">
+            <div class="d-flex align-items-center">
+              <img src="{{ asset('storage/' . $product->image) }}" class="img-rounded" alt="img-product">
+              <div class="d-flex flex-column ms-3">
+                <h4 class="fw-bold">{{ $product->name }}</h4>
+                <p class="fw-normal">{{ $product->price }}</p>
+                <p class="fw-normal">
+                  {{ $product->desc_product }}
+                </p>
+                <p>
+                  <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=6289697173037&text&type=phone_number&app_absent=0">Buy Here &raquo;</a>
+                </p>
+              </div>
+            </div>
           </div>
           @endforeach
         </div>
         
         <hr class="featurette-divider" />
-
         <div class="d-flex align-items-center featurette" id="about"
         data-aos="fade-in-right" data-aos-easing="ease-in-out" data-aos-duration="1000">
           <div class="col-md-7">
